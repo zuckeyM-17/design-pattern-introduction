@@ -1,17 +1,26 @@
 package Iterator;
 
-public class BookShelf {
+public class BookShelf implements Aggregate {
 	private Book[] books;
-	
+	private int last = 0;
 	public BookShelf(int maxsize) {
 		this.books = new Book[maxsize];
 	}
 	
+	public Book getBookAt(int index) {
+		return this.books[index];
+	}
+	
+	public void appendBook(Book book) {
+		this.books[last] = book;
+		last++;
+	}
+	
 	public int getLength() {
-		return this.books.length;
+		return this.last;
 	}
 	
 	public Iterator iterator() {
-		return new BookShelfIterator();
+		return new BookShelfIterator(this);
 	}
 }

@@ -1,12 +1,23 @@
 package Iterator;
 
 public class BookShelfIterator implements Iterator {
-	public BookShelfIterator() {
+	private BookShelf bookShelf;
+	private int index;
+	
+	public BookShelfIterator(BookShelf bookShelf) {
+		this.bookShelf = bookShelf;
+		this.index = 0;
 	}
 	public boolean hasNext() {
-		return true;
+		if (index < bookShelf.getLength()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	public Object next() {
-		return new Object();
+		Book book = bookShelf.getBookAt(index);
+		index++;
+		return book;
 	}
 }
