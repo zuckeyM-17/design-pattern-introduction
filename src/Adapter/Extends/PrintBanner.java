@@ -1,5 +1,7 @@
 package Adapter.Extends;
 
+import Adapter.Banner;
+
 public class PrintBanner extends Banner implements Print {
 	public PrintBanner(String string) {
 		super(string);

@@ -1,4 +1,4 @@
-package Adapter.Extends;
+package Adapter;
 
 public class Banner {
 	private String string;
