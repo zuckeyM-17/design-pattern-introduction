@@ -14,7 +14,7 @@ class IteratorTest {
 	
 	@Test
 	void testBookShelf() {
-		BookShelf bookShelf = new BookShelf(10); 
+		BookShelf bookShelf = new BookShelf(); 
 		assertTrue(bookShelf.iterator() instanceof Iterator);
 	}
 }
