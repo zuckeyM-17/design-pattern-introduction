@@ -1,4 +1,4 @@
-package Adapter;
+package Adapter.Extends;
 
 public interface Print {
 	public abstract void printWeak();
