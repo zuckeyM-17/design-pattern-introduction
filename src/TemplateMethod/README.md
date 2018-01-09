@@ -24,4 +24,22 @@
 	- Template Methodをインスタンス生成に応用
 - Strategy
 	- Templateは継承、Strategyは委譲
-	
+
+## 練習問題
+
+### 3-1
+https://docs.oracle.com/javase/jp/7/api/
+サブクラスを定義する必要のあるアプリケーションは、必ず入力の次のバイトを返すメソッドを提供しなければなりません。
+abstract int	read()
+入力ストリームからデータの次のバイトを読み込みます。
+
+### 3-2
+finalの意味
+これ以上overrideされない
+
+### 3-3
+publicではなく、protectedをつける
+
+### 3-4
+インターフェースには、display()のような共通ロジックを書くことができないため。
+
