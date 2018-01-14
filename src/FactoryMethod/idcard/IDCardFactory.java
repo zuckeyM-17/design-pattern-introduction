@@ -4,16 +4,16 @@ import FactoryMethod.framework.*;
 import java.util.*;
 
 public class IDCardFactory extends Factory {
-	private ArrayList<String> owners = new ArrayList<String>();
+	private ArrayList<IDCard> idCards = new ArrayList<IDCard>();
 	
 	protected Product createProduct(String owner) {
-		return new IDCard(owner);
+		return new IDCard(owner, this.idCards.size());
 	}
 	
 	protected void registerProduct(Product product) {
-		owners.add(((IDCard)product).getOwner());
+		idCards.add(((IDCard)product));
 	}
-	public ArrayList<String> getOwners() {
-		return owners;
+	public ArrayList<IDCard> getIDCards() {
+		return idCards;
 	}
 }
