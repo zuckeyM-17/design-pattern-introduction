@@ -35,3 +35,22 @@
 ## 練習問題
 
 ### 4-1
+
+IDCardクラスのコンストラクタにpublicがついていない理由
+idcardパッケージ以外ではnewすることができない
+
+### 4-2
+
+カードに通し番号をつけ、IDCardFactoryクラスが通し番号と所持者の対応表を持つように修正
+
+https://github.com/zuckeyM-17/design-pattern-introduction/commit/0e6e25623afbd6186846244dd9b6eab7fa7a7496
+
+### 4-3
+
+コンストラクタに製品の名前を引数として与えることを強制しようとしたらエラーになった
+```java
+public abstract class Product {
+	public abstract Product(String name); // Javaではコンストラクタは抽象メソッドにできない。
+	public abstract void use();
+}
+```
